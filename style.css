@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root {
+  /* ## Colors */
+  /* ### Primary */
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  /* ### Neutral */
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+  --LightText: hsl(180, 40%, 82%);
+  ;
+  --GeneralPadding: 20px;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  background: var(--LightText);
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.grid {
+  display: grid;
+  margin: 25px;
+}
+
+.h-card {
+  min-height: 220px;
+}
+
+.join {
+  font-size: .85rem;
+  background: white;
+  padding: var(--GeneralPadding);
+  border-radius: 5px 5px 0 0;
+}
+
+.join h2 {
+  color: var(--Cyan);
+}
+
+.join p:nth-child(2) {
+  color: var(--BrightYellow);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25em;
+  margin: 20px 0
+}
+
+.join p {
+  color: var(--GrayishBlue);
+  line-height: 1.75em;
+}
+
+.subscribe {
+  padding: var(--GeneralPadding);
+  background: #2BB3B1;
+  color: var(--LightText);
+}
+
+.subscribe h2 {
+  color: white;
+}
+
+.subscribe span {
+  color: white;
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.subscribe p {
+  color: var(--LightGray);
+}
+
+.subscribe input[type="button"] {
+  margin-top: 2rem;
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: var(--BrightYellow);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.subscribe input[type="button"]:hover {
+  background: hsl(71, 54%, 67%);
+}
+
+.subscribe div {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.why {
+  padding: var(--GeneralPadding);
+  background: #4ABEBD;
+  color: white;
+  border-radius: 0 0 5px 5px;
+}
+
+.why ul {
+  list-style: none;
+  padding: 0;
+  color: var(--LightText);
+}
+
+.why ul li {
+  margin: 7px 0;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid {
+    max-width: 700px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .join {
+    height: 100px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .join h2 {
+    font-weight: 700;
+    font-size: 1.55em;
+  }
+  .join p {
+    font-size: 1.3em;
+  }
+  .subscribe {
+    border-radius: 0 0 0 5px;
+  }
+  .why {
+    border-radius: 0 0 5px 0;
+  }
+  .join,
+  .subscribe,
+  .why {
+    padding: 35px;
+    box-sizing: border-box;
+  }
+}
